@@ -17,8 +17,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python3 -m venv environ
+        environ/bin/python3 -m pip install --upgrade pip
         source environ/bin/activate
         bash install_reqs
     - name: Run Pylint
       run: |
+        source environ/bin/activate
         pylint --output-format=colorized $(git ls-files './*.py')
