@@ -62,6 +62,7 @@ class Graph:
         second_point: typing.Tuple[float, float],
         optimizer: str = "length",
     ) -> (int, typing.List[int]):
+        # pylint: disable=unbalanced-tuple-unpacking
         """
         Возвращает кратчайший путь между двумя координатами в области графа.
 
